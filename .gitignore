@@ -1,0 +1,25 @@
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Intellij IDEA stuff
+*.iml
+.idea
+
+# eclipse stuff
+.settings
+.project
+.classpath
+bin
+
+# maven build folder
+target
