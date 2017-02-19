@@ -1,0 +1,1 @@
+java -XX:+HeapDumpOnOutOfMemoryError -Xmx100M -jar memoryleak.jar  

@@ -1,4 +1,5 @@
 *.class
+*.hprof
 
 # Log file
 *.log
@@ -7,13 +8,13 @@
 *.jar
 *.war
 *.ear
-*.zip
 *.tar.gz
 *.rar
 
 # Intellij IDEA stuff
 *.iml
 .idea
+out
 
 # eclipse stuff
 .settings
