@@ -1,0 +1,1 @@
+java -Xmx10M -jar application.jar  
