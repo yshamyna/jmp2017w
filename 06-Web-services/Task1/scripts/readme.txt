@@ -1,0 +1,1 @@
+The scripts should be run from parent folder.

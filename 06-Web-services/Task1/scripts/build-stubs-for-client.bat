@@ -1,0 +1,1 @@
+wsimport FileShareService.wsdl -d stubs

@@ -1,0 +1,2 @@
+mkdir target
+javac -classpath ./target -d ./target webservice/src/com/jmp2017w/webservice/FileShareService.java webservice/src/com/jmp2017w/webservice/FileShareServiceImpl.java webservice/src/com/jmp2017w/Publisher.java
