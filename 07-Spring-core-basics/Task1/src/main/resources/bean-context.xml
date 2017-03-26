@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <bean id="A" name="Bean-A" class="com.jmp2017w.bean.A" lazy-init="true">
+        <property name="label" value="Unity" />
+        <property name="description" value="Same with solidarity." />
+        <property name="version" value="1" />
+        <property name="historySequence" value="23" />
+    </bean>
+
+    <bean id="B" name="Bean-B" class="com.jmp2017w.bean.B" lazy-init="true">
+        <constructor-arg name="a" ref="Bean-A" />
+    </bean>
+
+    <bean id="C" name="Bean-C" class="com.jmp2017w.bean.C" scope="singleton" lazy-init="true">
+        <lookup-method bean="Bean-D" name="buildDBean"/>
+    </bean>
+
+    <bean id="D" name="Bean-D" class="com.jmp2017w.bean.D" scope="prototype" lazy-init="true">
+        <property name="goodObject" value="true" />
+        <property name="opinion" value="I am a good object because forty-two." />
+    </bean>
+
+    <bean id="E" name="Bean-E" class="com.jmp2017w.bean.E" lazy-init="true">
+        <replaced-method name="greeting" replacer="Rudeable" />
+    </bean>
+
+    <bean id="Rudeable" name="Rudeable" class="com.jmp2017w.replacer.Rudeable" />
+
+    <bean id="F" name="Bean-F" class="com.jmp2017w.bean.F"  init-method="init" destroy-method="destroy" lazy-init="true" />
+
+    <bean id="lifecycleProcessor" class="org.springframework.context.support.DefaultLifecycleProcessor">
+        <property name="timeoutPerShutdownPhase" value="5000"/>
+    </bean>
+</beans>
