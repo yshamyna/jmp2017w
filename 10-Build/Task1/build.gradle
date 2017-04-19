@@ -1,0 +1,12 @@
+group 'com.jmp2017w'
+version '1.0-SNAPSHOT'
+
+allprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.6
+
+    repositories {
+        mavenCentral()
+    }
+}
