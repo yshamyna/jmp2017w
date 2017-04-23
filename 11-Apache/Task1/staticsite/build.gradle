@@ -1,0 +1,11 @@
+group 'com.jmp2017w.staticsite'
+version '1.0-SNAPSHOT'
+
+task zipStaticsite(type: Zip) {
+    from "${project.projectDir}/"
+    include "*"
+    include "*/*"
+    exclude "build.gradle"
+    archiveName "staticsite.zip"
+    destinationDir(file("${project.projectDir}/../build"))
+}

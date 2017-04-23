@@ -1,0 +1,6 @@
+rootProject.name = 'customwebsite'
+include 'service'
+include 'web'
+include 'staticsite'
+include 'apache'
+
