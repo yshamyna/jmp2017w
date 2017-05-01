@@ -37,3 +37,4 @@ build
 gradlew
 gradlew.bat
 gradle
+distrib
