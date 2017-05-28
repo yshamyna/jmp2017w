@@ -1,0 +1,11 @@
+group 'com.jmp2017w'
+version '1.0-SNAPSHOT'
+
+task zipApache(type: Zip) {
+    from "${project.projectDir}/"
+    include "*"
+    include "*/**"
+    exclude "build.gradle"
+    archiveName "apache.zip"
+    destinationDir(file("${project.projectDir}/../distrib"))
+}
